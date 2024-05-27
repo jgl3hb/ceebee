@@ -2,11 +2,21 @@
 import React from 'react';
 import './SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = ({ searchTerm, setSearchTerm, handleSearch}) => {
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search All Chats by Topic" />
-      <button>Search</button>
+      <input 
+        type="text" 
+        placeholder="Search All Chats by Topic" 
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleSearch();
+          }
+        }}
+        />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };
