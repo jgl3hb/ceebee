@@ -1,9 +1,21 @@
+// src/components/CategoryList.js
 import React from 'react';
 
-const categories = []
+const categories = [
+  'A Place To Start', 'Arts and Entertainment', 'Autos', 'Black Voices', 'Celebrities',
+  'Food', 'Friends', 'Games', 'Gay & Lesbian', 'Health', 'International'
+];
 
-const CategoriesList = () => {
-  return ()
-}
+const CategoryList = ({ onCategoryClick }) => {
+  return (
+    <div className="category-list">
+      {categories.map((category, index) => (
+        <div key={index} onClick={() => onCategoryClick(category)}>
+          {category}
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default CategoriesList;
+export default CategoryList;
