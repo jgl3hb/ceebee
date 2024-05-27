@@ -2,8 +2,8 @@
 import React from 'react';
 
 const categories = [
-  'A Place To Start', 'Arts and Entertainment', 'Autos', 'Black Voices', 'Celebrities',
-  'Food', 'Friends', 'Games', 'Gay & Lesbian', 'Health', 'International'
+  'A Place To Start', 'Entertainment', 'Autos', 'Celebrities',
+  'Food', 'Games', 'LGBT+', 'Health', 'Sports'
 ];
 
 const CategoryList = ({ onCategoryClick }) => {

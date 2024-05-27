@@ -1,16 +1,30 @@
+// src/App.js
+import React, { useState } from 'react';
+import SearchBar from './components/SearchBar';
+import CategoryList from './components/CategoryList';
+import RoomList from './components/RoomList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to CeeBee
-        </p>
+const App = () => {
+  const [selectedCategory, setSelectedCategory] = useState('');
 
+  return (
+    <div className="app">
+      <header>
+        <h1>Chat Room Listings</h1>
       </header>
+      <main>
+        <div className="main-content">
+          <SearchBar />
+          <div className="content">
+            <CategoryList onCategoryClick={setSelectedCategory} />
+            <RoomList onCategoryClick={setSelectedCategory} />
+          </div>
+          
+        </div>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
