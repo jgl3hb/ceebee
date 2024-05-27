@@ -1,6 +1,7 @@
 // src/components/RoomList.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './RoomList.css';  // Import the CSS file
 
 const rooms = {
   'A Place To Start': ['The Crash Pad', 'Coffee Katch', 'The Cafe', 'Groove Lounge'],

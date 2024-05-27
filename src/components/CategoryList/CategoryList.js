@@ -1,5 +1,6 @@
 // src/components/CategoryList/CategoryList.js
 import React from 'react';
+import './CategoryList.css'
 
 const categories = [
   'A Place To Start', 'Entertainment', 'Autos', 'Celebrities',

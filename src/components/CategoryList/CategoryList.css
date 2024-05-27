@@ -1,0 +1,10 @@
+
+.category-list div {
+  cursor: pointer;
+  border-right: 5px solid red;
+  padding: 5px;  
+}
+
+.category-list div:hover {
+  background-color: #f0f0f0;
+}

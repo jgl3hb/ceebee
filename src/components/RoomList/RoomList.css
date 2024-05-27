@@ -1,0 +1,9 @@
+/* src/components/RoomList/RoomList.css */
+.room-list div {
+  cursor: pointer;
+  padding: 5px;  /* Optional: for better spacing and clickable area */
+}
+
+.room-list div:hover {
+  background-color: #f0f0f0;  /* Optional: visual feedback on hover */
+}
