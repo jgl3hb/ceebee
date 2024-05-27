@@ -1,4 +1,4 @@
-// src/components/CategoryList.js
+// src/components/CategoryList/CategoryList.js
 import React from 'react';
 
 const categories = [
