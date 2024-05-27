@@ -18,9 +18,8 @@ const App = () => {
           <SearchBar />
           <div className="content">
             <CategoryList onCategoryClick={setSelectedCategory} />
-            <RoomList onCategoryClick={setSelectedCategory} />
+            <RoomList selectedCategory={selectedCategory} />
           </div>
-          
         </div>
       </main>
     </div>
