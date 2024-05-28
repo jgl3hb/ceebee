@@ -39,7 +39,7 @@ const HomePage = () => {
               ))
               ) : (
               <div>No results found</div>
-            )};
+            )}
             </div>
         ) : (
           <>
