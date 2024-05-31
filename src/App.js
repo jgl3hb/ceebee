@@ -5,6 +5,7 @@ import axios from 'axios';
 import HomePage from './components/HomePage/HomePage';
 import ChatRoom from './components/ChatRoom/ChatRoom';
 import LoginPage from './components/LoginPage/LoginPage';
+import Profile from './components/ProfilePage/ProfilePage';
 import './App.css';
 
 const App = () => {
@@ -43,13 +44,19 @@ const App = () => {
           <Link to="/">
             <h1>Chat Room Listings</h1>
           </Link>
-          {user && <button onClick={handleLogout}>Logout</button>}
+          {user && (
+            <>
+              <Link to="/profile">Profile</Link>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          )}
         </header>
         <main>
           {user ? (
             <Routes>
               <Route path="/" element={<HomePage user={user} />} />
               <Route path="/chat/:room" element={<ChatRoom user={user} />} />
+              <Route path="/profile" element={<Profile user={user} updateUser={setUser} />} />
             </Routes>
           ) : (
             <LoginPage onLoginSuccess={handleLoginSuccess} />

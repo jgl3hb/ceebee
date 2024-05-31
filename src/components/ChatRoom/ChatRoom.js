@@ -24,7 +24,7 @@ const ChatRoom = ({ user }) => {
         <div className="messages">
           {messages.map((message, index) => (
             <div key={index} className="message">
-              {message}
+              {user.handle}: {message}
             </div>
           ))}
         </div>
