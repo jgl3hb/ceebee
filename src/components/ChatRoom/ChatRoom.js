@@ -17,10 +17,10 @@ const ChatRoom = ({ user }) => {
   return (
     <div className="chat-room">
       <h2>Chat Room: {room}</h2>
+      <div className="user-info">
+        <p>Logged in as: {user.name}</p>
+      </div>
       <div className="chat-window">
-        <div className="user-info">
-          <p>Logged in as: {user.name}</p>
-        </div>
         <div className="messages">
           {messages.map((message, index) => (
             <div key={index} className="message">
